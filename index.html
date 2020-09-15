@@ -18,6 +18,7 @@
 	</head>
 
 	<body>
+		<!-- Jumbotron header -->
 		<header class="jumbotron jumbotron-fluid">
 			<div class="container">
 				<div class="row align-items-center">
@@ -25,27 +26,76 @@
 						<img src="img/logo.png" class="img-fluid" />
 					</div>
 					<div class="col">
-						<div>
-							<h1>NuCamp</h1>
-							<h2>a better way to camp</h2>
-						</div>
+						<h1>NuCamp</h1>
+						<h2>a better way to camp</h2>
 					</div>
 					<div class="col-md-4 col-xl-2 mt-4">
-						<a
-							class="btn btn-lg btn-info text-nowrap"
-							role="button"
-							href="#reserveForm"
-							data-toggle="tooltip"
-							data-placement="bottom"
-							data-html="true"
-							title="Or call us at <br /><strong>1-206-555-1234</strong>"
-							>Reserve Campsite</a
-						>
+						<a class="btn btn-lg btn-info mx-auto text-nowrap" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
 					</div>
 				</div>
 			</div>
 		</header>
 
+		<!-- Reservation modal -->
+		<div class="modal fade" id="reserveModal" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-info text-white">
+						<h3>Reserve a Campsite</h3>
+						<button class="close" type="button" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="container-fluid">
+							<form id="reserveForm">
+								<div class="row form-row form-group">
+									<label class="col-xs-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+									<!-- Dropdown menu for number of campers-->
+									<div class="col col-xs-12 col-sm-6">
+										<select class="form-control" name="numCampers" id="numCampers">
+											<option>Select</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+										</select>
+									</div>
+								</div>
+								<!-- Date selector -->
+								<div class="row form-row form-group">
+									<label class="col-xs-12 col-sm-6 col-form-label" for="date">Date</label>
+									<div class="col col-xs-12 col-sm-6">
+										<input class="form-control" type="date" name="date" id="date" placeholder="date" />
+									</div>
+								</div>
+								<!-- Campsite type selector -->
+								<div class="row form-group">
+									<label class="col-form-label col-sm-6">Campsite Type</label>
+									<div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+										<label for="siteType" class="btn btn-success active">
+											<input type="radio" name="siteType" id="siteTent" value="tent" checked >Tent
+										</label>
+										<label for="siteType" class="btn btn-primary">
+											<input type="radio" name="siteType" id="siteRV" value="RV" >RV
+										</label>
+									</div>
+								</div>
+								<!-- Cancel/Search buttons -->
+								<div class="row form-row">
+									<div class="col">
+										<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+										<button class="btn btn-primary" type="submit">Search</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Navigation bar -->
 		<nav class="navbar navbar-expand-sm navbar-dark sticky-top">
 			<div class="container">
 				<a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
@@ -67,7 +117,6 @@
 							<a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a>
 						</li>
 					</ul>
-
 					<span class="navbar-text ml-auto">
 						<a role="button" data-toggle="modal" data-target="#loginModal"> <i class="fa fa-sign-in"></i> Login </a>
 					</span>
@@ -75,11 +124,12 @@
 			</div>
 		</nav>
 
+		<!-- Login modal -->
 		<div class="modal fade" id="loginModal" role="dialog">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h3 class="modal-tital">Login</h3>
+						<h3 class="modal-title">Login</h3>
 						<button class="close" type="button" data-dismiss="modal">&times;</button>
 					</div>
 					<div class="modal-body">
@@ -112,6 +162,7 @@
 			</div>
 		</div>
 
+		<!-- Photo carousel -->
 		<div class="container">
 			<div class="row row-content">
 				<div class="col-md-8 mx-auto">
@@ -155,7 +206,7 @@
 					</div>
 				</div>
 			</div>
-
+			<!-- Main body -->
 			<div class="row row-content align-items-center">
 				<div class="col-sm-4 order-sm-last col-md-3">
 					<h2 class="text-sm-right">Discover & Review</h2>
@@ -201,15 +252,17 @@
 				</div>
 			</div>
 
-			<div class="row row-content align-items-center">
+			<!-- Reservation card -->
+			<!-- <div class="row row-content align-items-center">
 				<div class="col col-sm-6 mx-auto">
 					<div class="card">
 						<h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
 						<div class="card-body">
 							<form id="reserveForm">
 								<div class="row form-row form-group">
-									<label class="col-xs-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
-									<div class="col col-xs-12 col-sm-6">
+									<label class="col-xs-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label> -->
+									<!-- Dropdown menu -->
+									<!-- <div class="col col-xs-12 col-sm-6">
 										<select class="form-control" name="numCampers" id="numCampers">
 											<option>Select</option>
 											<option value="1">1</option>
@@ -227,7 +280,6 @@
 										<input class="form-control" type="date" name="date" id="date" placeholder="date" />
 									</div>
 								</div>
-
 								<div class="row form-row">
 									<div class="col">
 										<button class="btn btn-primary" type="submit">Search</button>
@@ -238,8 +290,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
+		<!-- Footer -->
 		<footer class="site-footer">
 			<div class="container">
 				<div class="row row-content align-items-center">
@@ -266,15 +319,16 @@
 				</div>
 			</div>
 		</footer>
+
 		<!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-		<script>
+		<!-- <script>
 			$(function () {
 				$('[data-toggle="tooltip"]').tooltip();
 			});
-		</script>
+		</script> -->
 	</body>
 </html>
