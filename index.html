@@ -18,7 +18,6 @@
 	</head>
 
 	<body>
-
 		<!-- Jumbotron header -->
 		<header class="jumbotron jumbotron-fluid">
 			<div class="container">
@@ -74,12 +73,8 @@
 								<div class="row form-group">
 									<label class="col-form-label col-sm-6">Campsite Type</label>
 									<div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-										<label for="siteType" class="btn btn-success active">
-											<input type="radio" name="siteType" id="siteTent" value="tent" checked >Tent
-										</label>
-										<label for="siteType" class="btn btn-primary">
-											<input type="radio" name="siteType" id="siteRV" value="RV" >RV
-										</label>
+										<label for="siteType" class="btn btn-success active"> <input type="radio" name="siteType" id="siteTent" value="tent" checked />Tent </label>
+										<label for="siteType" class="btn btn-primary"> <input type="radio" name="siteType" id="siteRV" value="RV" />RV </label>
 									</div>
 								</div>
 								<!-- Cancel/Search buttons -->
@@ -205,65 +200,61 @@
 							<span class="sr-only">Next</span>
 						</a>
 						<!-- Carousel Play/Pause -->
-						<div class="btn-group" id="carouselButton">
-							<button class="btn btn-danger btn-sm" id="carouselPause">
-								<i class="fa fa-pause"></i>
-							</button>
-							<button class="btn btn-danger btn-sm" id="carouselPlay">
-								<i class="fa fa-play"></i>
-							</button>
-						</div>
+						<button class="btn btn-danger btn-sm" id="carouselButton">
+							<i class="fa fa-pause"></i>
+						</button>
 					</div>
 				</div>
 			</div>
-			<!-- Main body -->
-			<div class="row row-content align-items-center">
-				<div class="col-sm-4 order-sm-last col-md-3">
-					<h2 class="text-sm-right">Discover & Review</h2>
-				</div>
-				<div class="col">
-					<div class="media">
-						<img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
-						<div class="media-body align-self-center">
-							<h3>Our Campsites</h3>
-							<p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
-						</div>
+		</div>
+		<!-- Main body -->
+		<div class="row row-content align-items-center">
+			<div class="col-sm-4 order-sm-last col-md-3">
+				<h2 class="text-sm-right">Discover & Review</h2>
+			</div>
+			<div class="col">
+				<div class="media">
+					<img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+					<div class="media-body align-self-center">
+						<h3>Our Campsites</h3>
+						<p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="row row-content align-items-center">
-				<div class="col-sm-4 col-md-3">
-					<h2>Featured Campsites</h2>
+		<div class="row row-content align-items-center">
+			<div class="col-sm-4 col-md-3">
+				<h2>Featured Campsites</h2>
+			</div>
+			<div class="col">
+				<div class="media">
+					<div class="media-body align-self-center">
+						<h3>React Lake Campground</h3>
+						<p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+					</div>
+					<img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake" />
 				</div>
-				<div class="col">
-					<div class="media">
-						<div class="media-body align-self-center">
-							<h3>React Lake Campground</h3>
-							<p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-						</div>
-						<img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake" />
+			</div>
+		</div>
+
+		<div class="row row-content align-items-center">
+			<div class="col-sm-4 order-sm-last col-md-3">
+				<h2 class="text-sm-right">Our Community Partners</h2>
+			</div>
+			<div class="col">
+				<div class="media">
+					<img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+					<div class="media-body align-self-center">
+						<h3>Bootstrap Outfitters</h3>
+						<p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="row row-content align-items-center">
-				<div class="col-sm-4 order-sm-last col-md-3">
-					<h2 class="text-sm-right">Our Community Partners</h2>
-				</div>
-				<div class="col">
-					<div class="media">
-						<img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
-						<div class="media-body align-self-center">
-							<h3>Bootstrap Outfitters</h3>
-							<p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Reservation card -->
-			<!-- <div class="row row-content align-items-center">
+		<!-- Reservation card (Updated to open from a modal in jumbotron button, uncomment for card)-->
+		<!-- <div class="row row-content align-items-center">
 				<div class="col col-sm-6 mx-auto">
 					<div class="card">
 						<h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
@@ -271,8 +262,8 @@
 							<form id="reserveForm">
 								<div class="row form-row form-group">
 									<label class="col-xs-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label> -->
-									<!-- Dropdown menu -->
-									<!-- <div class="col col-xs-12 col-sm-6">
+		<!-- Dropdown menu -->
+		<!-- <div class="col col-xs-12 col-sm-6">
 										<select class="form-control" name="numCampers" id="numCampers">
 											<option>Select</option>
 											<option value="1">1</option>
@@ -334,7 +325,7 @@
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		
+
 		<!-- Tooltip jQuery -->
 		<!-- <script>
 			$(function () {
@@ -342,17 +333,22 @@
 			});
 		</script> -->
 
-		<!-- Carousel image cycle interval -->
+		<!-- Carousel image cycle interval and button function-->
 		<script>
-			$(function(){
-				$(".carousel").carousel({interval: 2000});
-				$("#carouselPause").click(function(){
-					$(".carousel").carousel("pause");
+			$(function () {
+				$(".carousel").carousel({ interval: 2000 });
+				$("#carouselButton").click(function () {
+					if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+						$(".carousel").carousel("pause");
+						$("#carouselButton").children("i").removeClass("fa-pause");
+						$("#carouselButton").children("i").addClass("fa-play");
+					} else {
+						$(".carousel").carousel("cycle");
+						$("#carouselButton").children("i").removeClass("fa-play");
+						$("#carouselButton").children("i").addClass("fa-pause");
+					}
 				});
-				$("#carouselPlay").click(function(){
-					$(".carousel").carousel("cycle");
-				});
-			})
+			});
 		</script>
 	</body>
 </html>
