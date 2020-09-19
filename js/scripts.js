@@ -13,3 +13,17 @@ $(function () {
 		}
 	});
 });
+
+//  Reserve campsite button function
+$(function () {
+	$("#reserveButton").click(function () {
+		$("#reserveModal").modal("show");
+	});
+});
+
+// Login button function
+$(function () {
+	$("#loginButton").click(function () {
+		$("#loginModal").modal("show");
+	});
+});
